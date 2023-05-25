@@ -1,0 +1,12 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 20px;
+  background: #A40800;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #5e0500;
+  color: white;
+}
