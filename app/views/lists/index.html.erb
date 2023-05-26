@@ -8,13 +8,15 @@
 <div class="container my-5">
   <div class="nav-card d-flex justify-content-between">
     <h2>My lists</h2>
-    <a href="#" class="btn btn-flat shadow">Create a movie list</a>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat shadow" %>
   </div>
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <%= list.name %>
-      </div>
+      <%= link_to list_path(list) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.fandango.com/ImageRenderer/400/0/redesign/static/img/default_poster.png/0/images/masterrepository/other/22_the-purge-under-the-bed_Purge2.jpg)">
+          <%= list.name %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

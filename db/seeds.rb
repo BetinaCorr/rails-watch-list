@@ -37,3 +37,13 @@ Movie.create(
   rating: 7.0)
 
 puts "Finished!"
+
+
+puts "Destroying lists..."
+List.destroy_all
+
+puts "Creating lists..."
+
+List.create(name: "Suspense")
+
+puts "Finished!"
