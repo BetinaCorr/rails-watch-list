@@ -1,7 +1,10 @@
-<h1>Add a movie to my List</h1>
+<div class="list-form">
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+  <h1>Add a movie to my List</h1>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit class:"btn btn-flat shadow"%>
+  <% end %>
+</div>
